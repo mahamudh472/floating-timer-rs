@@ -1,9 +1,8 @@
-# Floating Timer (Rust)
+# Floating Timer
 
-A port of the PySide6 [Floating Timer](../floating-timer) to Rust, built with
-`eframe`/`egui`. It is an always-on-top, borderless countdown timer that lives
-in the system tray, remembers its position and task name, and automatically
-shrinks into a small pill while running.
+An always-on-top, borderless countdown timer built with `eframe`/`egui`. It
+lives in the system tray, remembers its position and task name, and
+automatically shrinks into a small pill while running.
 
 ## Features
 
@@ -32,7 +31,7 @@ This requires a Rust toolchain (`rustup`) and ImageMagick. It installs:
 - `~/.local/share/applications/floating-timer-rs.desktop`
 - icons under `~/.local/share/icons/hicolor/`
 
-Launch **Floating Timer (Rust)** from your application menu, or run:
+Launch **Floating Timer** from your application menu, or run:
 
 ```bash
 ~/.local/bin/FloatingTimer
@@ -76,11 +75,11 @@ State is stored as JSON at:
 - On **Wayland**, compositors do not let applications place their own windows,
   so the saved position is only restored on X11. All other features work.
 - The "all desktops / always above" behaviour uses a short KWin script on KDE
-  Plasma (Wayland and X11), matching the original app, and EWMH client messages
-  on other X11 window managers.
+  Plasma (Wayland and X11), and EWMH client messages on other X11 window
+  managers.
 
 ## Third-party assets
 
 - `assets/DejaVuSans-Bold.ttf` - DejaVu Sans Bold, see
   `assets/DejaVuSans-Bold.LICENSE.txt`.
-- `assets/icon.png` - from the original PySide6 Floating Timer project.
+- `assets/icon.png` - application icon.

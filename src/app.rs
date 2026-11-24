@@ -401,8 +401,8 @@ impl TimerApp {
                 .hint_text("Task name...")
                 .font(FontId::proportional(14.0))
                 .text_color(WHITE)
-                .frame(egui::Frame::NONE)
-                .margin(Margin::symmetric(8, 4)),
+                .frame(egui::Frame::NONE.inner_margin(Margin::symmetric(8, 4)))
+                .align(Align2::LEFT_CENTER),
         );
         if task_response.changed() {
             self.save();
